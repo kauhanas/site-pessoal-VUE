@@ -86,7 +86,7 @@ header nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 28px;
+  font-size: 24px;
   padding-inline-end: 30vh;
   width:20%;
   color: #012E40;
