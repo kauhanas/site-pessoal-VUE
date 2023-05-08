@@ -33,22 +33,10 @@ div.estrutura {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: 80vh;
+  row-gap: 600px;
   align-items: space-around;
   margin-top: 10vh;
-  border-color: 2px red;
-  margin: 5vh;
 
-}
-
-.apresentacao {
-  display: flex;
-  flex-direction: column;
-}
-
-.informacoes {
-  display: flex;
-  flex-direction: column;
 }
 
 </style>

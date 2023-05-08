@@ -17,7 +17,8 @@ export default {
           <img src="@/assets/img/kauhana.jpg" height="500" />
       </div>
       <div class="box">
-        <h1> Oi! Meu nome é Kauhana, mas pode me chamar de <b>KAUh</b>.</h1>
+        <h1> Oi! Meu nome é Kauhana, mas pode me chamar de <b>Kauh</b>.</h1>
+        <p> Para saber mais é só clicar na minha foto!</p>
       </div>
     </div> 
     
@@ -29,29 +30,39 @@ export default {
 div.container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-content: center;
   position: relative;
+  height: 0;
 }
 .box {
   display: flex;
-  border-style: 3px solid #FF6B1A;
-  box-shadow: 0 0 2px 2px white;
-  width: 40vh;
-  padding-left: 30vh;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 25px;
-  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  left: 20%;
+  
+
+  border: solid 2px #F24405;
   border-radius: 280px 80px 80px 20px;
+  width: 330px;
+  height: 300px;
+  padding-left: 340px;
+  padding-right: 40px;
+
+  text-align: center;
   
 }
 
 .imagem img {
-  float: flex;
-  border-radius: 300px;
-  position: absolute;
+  display: flex;
+  z-index: 1;
+  border-radius: 100%;
+  left: -20%;
+  position: relative;
 
 }
-
 
 
 h1 {
@@ -62,8 +73,10 @@ h1 {
 
 p {
   font-family: 'Dosis', sans-serif;
+  font-size: 20px;
   font-weight: 100;
   color: white;
+  width: 270px;
 
 }
 

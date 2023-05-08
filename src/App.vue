@@ -27,7 +27,7 @@ export default {
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="50" height="50" />
+    <img alt="Vue logo" class="logo" src="@/assets/k01.png"/>
 
       <nav>
         <RouterLink to="/" :class="{active: isSelectedRoute('Home')}">Home</RouterLink>
@@ -52,9 +52,15 @@ export default {
 </template>
 
 <style scoped>
+
+header img {
+  width: 8vh;
+  height: 8vh
+}
+
 .active {
-  color: #FF6B1A;
-  outline: 1px solid #004744;
+  color: #012E40;
+  outline: 2px solid #F24405;
   outline-offset: 15px;
   border-radius: 10px;
 
@@ -79,20 +85,24 @@ header nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-inline-end: 20vh;
+  font-size: 28px;
+  padding-inline-end: 30vh;
   width:20%;
-  color: #004744;
+  color: #012E40;
 
 }
 
 main {
     padding-top: 10vh;
-    min-height: 120vh;
-    background: #004744;
+    padding-bottom: 0%;
+    min-height: 110vh;
+    max-height: 100%;
+    width: 100%;
+    background: #012E40;
 }
 
 .footer {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
   justify-content: center;
@@ -108,8 +118,13 @@ main {
 .social-icons a {
   display: inline-block;
   margin-right: 20px;
-  color: #B33F00;
+  color: #F24405;
   transition: color 0.2s;
+}
+
+p {
+  color: #012E40;
+  font-size: 20px;
 }
 
 </style>
