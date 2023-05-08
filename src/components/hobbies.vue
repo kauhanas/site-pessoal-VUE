@@ -40,8 +40,8 @@ div.hobbieleft {
   justify-content: space-between;
   display: flex;
   padding-top: 3vh;
-  padding-inline-start: 95vh;
-  padding-right: 40vh;
+  padding-inline-start: 90vh;
+  padding-right: 30vh;
   align-items: center;
 }
 
@@ -50,8 +50,8 @@ div.hobbieright {
   justify-content: space-between;
   display: flex;
   padding-top: 3vh;
-  padding-inline-end: 95vh;
-  padding-left: 40vh;
+  padding-inline-end: 90vh;
+  padding-left: 30vh;
   align-items: center;
 }
 

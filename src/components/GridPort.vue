@@ -10,16 +10,25 @@
   
 <script>
 
+
+import photo1 from "/img/lotr.png"
+import photo2 from "/img/gato.png"
+import photo3 from "/img/quadro.jpg"
+import photo4 from "/img/magicleap.jpg"
+import photo5 from "/img/ovo.png"
+import photo6 from "/img/rack.png"
+
+
   export default {
     data() {
       return {
         photos: [
-          { src: "/img/lotr.png", alt: 'Photo 1' , caption: "Acessórios diversos em madeira maciça."},
-          { src: "/img/gato.png", alt: 'Photo 2' , caption: "Produtos ergonômicos para pets, como comedouros e rampas elevadas."},
-          { src: "/img/quadro.jpg", alt: 'Photo 3' , caption: "Produtos para decoração e utensílios de casa."},
-          { src: "/img/magicleap.jpg", alt: 'Photo 4' , caption: "Pesquisa com usuários e roadmaps de tendências tecnológicas."},
-          { src: "/img/ovo.png", alt: 'Photo 5' , caption: "Impressão 3d e acabamento com pintura."},
-          { src: "/img/rack.png", alt: 'Photo 6' , caption: "Design Industrial, produtos técnicos com processo de injeção plástica, chaparia de metal e etc."},
+          { src: photo1, alt: 'Photo 1' , caption: "Acessórios diversos em madeira maciça."},
+          { src: photo2, alt: 'Photo 2' , caption: "Produtos ergonômicos para pets, como comedouros e rampas elevadas."},
+          { src: photo3, alt: 'Photo 3' , caption: "Produtos para decoração e utensílios de casa."},
+          { src: photo4, alt: 'Photo 4' , caption: "Pesquisa com usuários e roadmaps de tendências tecnológicas."},
+          { src: photo5, alt: 'Photo 5' , caption: "Impressão 3d e acabamento com pintura."},
+          { src: photo6, alt: 'Photo 6' , caption: "Design Industrial, produtos técnicos."},
 
         ],
       };
@@ -37,8 +46,12 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  flex-direction: center;
   margin-left: 10vh;
   margin-right: 10vh;
+  padding-bottom: 10vh;
+  row-gap: 10vh;
 
 }
 
@@ -47,7 +60,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
 }
 
 .grid-item img {
