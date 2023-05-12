@@ -1,46 +1,71 @@
 <template>
-    <div class="grid">
-      <div v-for="photo in photos" :key="photo.src" class="grid-item">
-        <img :src="photo.src" :alt="photo.alt">
-        <p>{{ photo.caption }}</p>
+  <div class="grid">
+    <div v-for="photo in photos" :key="photo.src" class="grid-item">
+      <div>
+        <img :src="photo.src" :alt="photo.alt" />
+        <a href="https://www.behance.net/KauhanaS">
+          <h2 class="hoverText">Veja mais clicando aqui</h2>
+        </a>
       </div>
-
+      <p>{{ photo.caption }}</p>
     </div>
+  </div>
 </template>
-  
+
 <script>
+import photo1 from "/img/lotr.png";
+import photo2 from "/img/gato.png";
+import photo3 from "/img/quadro.jpg";
+import photo4 from "/img/magicleap.jpg";
+import photo5 from "/img/ovo.png";
+import photo6 from "/img/rack.png";
 
-
-import photo1 from "/img/lotr.png"
-import photo2 from "/img/gato.png"
-import photo3 from "/img/quadro.jpg"
-import photo4 from "/img/magicleap.jpg"
-import photo5 from "/img/ovo.png"
-import photo6 from "/img/rack.png"
-
-
-  export default {
-    data() {
-      return {
-        photos: [
-          { src: photo1, alt: 'Photo 1' , caption: "Acessórios diversos em madeira maciça."},
-          { src: photo2, alt: 'Photo 2' , caption: "Produtos ergonômicos para pets, como comedouros e rampas elevadas."},
-          { src: photo3, alt: 'Photo 3' , caption: "Produtos para decoração e utensílios de casa."},
-          { src: photo4, alt: 'Photo 4' , caption: "Pesquisa com usuários e roadmaps de tendências tecnológicas."},
-          { src: photo5, alt: 'Photo 5' , caption: "Impressão 3d e acabamento com pintura."},
-          { src: photo6, alt: 'Photo 6' , caption: "Design Industrial, produtos técnicos."},
-
-        ],
-      };
+export default {
+  data() {
+    return {
+      photos: [
+        {
+          src: photo1,
+          alt: "Photo 1",
+          caption: "Acessórios diversos em madeira maciça.",
+        },
+        {
+          src: photo2,
+          alt: "Photo 2",
+          caption:
+            "Produtos ergonômicos para pets, como comedouros e rampas elevadas.",
+        },
+        {
+          src: photo3,
+          alt: "Photo 3",
+          caption: "Produtos para decoração e utensílios de casa.",
+        },
+        {
+          src: photo4,
+          alt: "Photo 4",
+          caption:
+            "Pesquisa com usuários e roadmaps de tendências tecnológicas.",
+        },
+        {
+          src: photo5,
+          alt: "Photo 5",
+          caption: "Impressão 3d e acabamento com pintura.",
+        },
+        {
+          src: photo6,
+          alt: "Photo 6",
+          caption: "Design Industrial, produtos técnicos.",
+        },
+      ],
+    };
+  },
+  computed: {
+    getImg(path) {
+      return require(path);
     },
-    computed: {
-      getImg(path){
-          return require(path)
-      }
-    }
-  };
-  </script>
-
+  },
+};
+</script>
 
 <style scoped>
 .grid {
@@ -52,7 +77,6 @@ import photo6 from "/img/rack.png"
   margin-right: 10vh;
   padding-bottom: 10vh;
   row-gap: 10vh;
-
 }
 
 .grid-item {
@@ -63,15 +87,11 @@ import photo6 from "/img/rack.png"
 }
 
 .grid-item img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 450px;
-  height: 450px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-bottom: solid #F24405 15px;
-  border-radius: 40px 40px 40px
-
+  border-radius: 40px 40px 40px;
+  border-bottom: solid #f24405 15px;
 }
 
 .grid-item p {
@@ -79,11 +99,41 @@ import photo6 from "/img/rack.png"
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
   font-size: 20px;
   font-weight: 100;
   width: 400px;
-
 }
 
+.grid-item > div {
+  width: 450px;
+  height: 450px;
+  border-radius: 40px 40px 40px;
+  position: relative;
+}
+
+.grid-item a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  display: none;
+}
+.grid-item:hover {
+  opacity: none;
+}
+
+.grid-item:hover a {
+  display: flex;
+}
+
+.hoverText{
+  color:black;
+  font-family: Monospace;
+
+}
 </style>

@@ -53,6 +53,8 @@ div.generico {
     justify-content: space-around;
     height: fit-content;
     width: 100%;
+    animation: go-foward 2s;
+
 }
 
 div.birthday {
@@ -99,6 +101,7 @@ div.banoff {
     height: auto;
     margin-top: 80px;
     margin-bottom: 50px;
+    animation: go-foward 2s;
 
 }
 
@@ -143,4 +146,13 @@ div.fotos img {
     border-radius: 40px 40px 40px
 
 }
+@keyframes go-foward {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 </style>
